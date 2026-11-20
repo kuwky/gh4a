@@ -637,6 +637,9 @@
     <string name="theme_light">Day</string>
     <string name="theme_dark">Night</string>
     <string name="theme_system">Use system setting</string>
+    <string name="material_you">Material You</string>
+    <string name="material_you_summary">Use colors derived from your wallpaper</string>
+    <string name="material_you_unavailable">Requires Android 12 or newer</string>
 
     <string name="use_custom_tabs">Use built-in browser</string>
     <string name="open_links_inside_app">Open links inside the app</string>

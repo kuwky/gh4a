@@ -4,6 +4,16 @@ OctoDroid
 =========
 This application provides access to [GitHub](https://github.com/) and lets you stay connected with your network
 
+Material You
+------------
+This fork adds support for **Material You** dynamic colors on Android 12 and newer.
+When enabled, the app derives its color palette from the device wallpaper, so it
+matches the rest of the system and other Material You apps.
+
+The feature is enabled by default on supported devices and can be toggled in
+*Settings → Material You*. On older Android versions the app keeps its original
+green theme.
+
 Download
 --------
 [<img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="80px">](https://f-droid.org/packages/com.gh4a/)

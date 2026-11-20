@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ThemeOverlay.Gh4a.MaterialYou"
+        parent="ThemeOverlay.Gh4a.MaterialYou.Base">
+        <item name="colorPrimary">@color/m3_ref_palette_dynamic_primary30</item>
+        <item name="colorPrimaryDark">@color/m3_ref_palette_dynamic_primary20</item>
+        <item name="colorOnPrimary">@color/m3_ref_palette_dynamic_primary100</item>
+    </style>
+</resources>

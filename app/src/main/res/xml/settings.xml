@@ -11,6 +11,13 @@
         android:summary="%s"
         android:title="@string/theme" />
 
+    <SwitchPreference
+        app:iconSpaceReserved="false"
+        android:defaultValue="true"
+        android:key="material_you"
+        android:summary="@string/material_you_summary"
+        android:title="@string/material_you" />
+
     <ListPreference
         app:iconSpaceReserved="false"
         android:defaultValue="newsfeed"

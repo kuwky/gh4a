@@ -29,6 +29,7 @@ import com.gh4a.activities.IssueListActivity;
 import com.gh4a.activities.RepositoryActivity;
 import com.gh4a.worker.NotificationsWorker;
 import com.gh4a.widget.IntegerListPreference;
+import com.google.android.material.color.DynamicColors;
 
 public class SettingsFragment extends PreferenceFragmentCompat implements
         Preference.OnPreferenceClickListener, Preference.OnPreferenceChangeListener {
@@ -39,6 +40,7 @@ public class SettingsFragment extends PreferenceFragmentCompat implements
     public static final String PREF_NAME = "Gh4a-pref";
 
     public static final String KEY_THEME = "theme";
+    public static final String KEY_MATERIAL_YOU = "material_you";
     public static final String KEY_START_PAGE = "start_page";
     public static final String KEY_TEXT_SIZE = "webview_initial_zoom";
     public static final String KEY_GIF_LOADING = "http_gif_load_mode";
@@ -50,6 +52,7 @@ public class SettingsFragment extends PreferenceFragmentCompat implements
 
     private OnStateChangeListener mListener;
     private IntegerListPreference mThemePref;
+    private TwoStatePreference mMaterialYouPref;
     private Preference mAboutPref;
     private Preference mOpenSourcePref;
     private TwoStatePreference mNotificationsPref;
@@ -72,6 +75,14 @@ public class SettingsFragment extends PreferenceFragmentCompat implements
         mThemePref = findPreference(KEY_THEME);
         mThemePref.setOnPreferenceChangeListener(this);
 
+        mMaterialYouPref = findPreference(KEY_MATERIAL_YOU);
+        if (DynamicColors.isDynamicColorAvailable()) {
+            mMaterialYouPref.setOnPreferenceChangeListener(this);
+        } else {
+            mMaterialYouPref.setEnabled(false);
+            mMaterialYouPref.setSummary(R.string.material_you_unavailable);
+        }
+
         mAboutPref = findPreference(KEY_ABOUT);
         mAboutPref.setOnPreferenceClickListener(this);
         mAboutPref.setSummary(getAppName());
@@ -88,7 +99,7 @@ public class SettingsFragment extends PreferenceFragmentCompat implements
 
     @Override
     public boolean onPreferenceChange(Preference pref, Object newValue) {
-        if (pref == mThemePref) {
+        if (pref == mThemePref || pref == mMaterialYouPref) {
             mListener.onThemeChanged();
             return true;
         }

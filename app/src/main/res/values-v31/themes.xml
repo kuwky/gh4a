@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        Material You (dynamic color) overlay. Applied at runtime by
+        DynamicColors.applyToActivitiesIfAvailable() when the user enables
+        the "Material You" preference on Android 12+.
+
+        The app keeps its colored top app bar, so colorPrimary is pinned to a
+        darker tone of the wallpaper-derived palette in order to keep the
+        white app bar content readable in both light and dark mode.
+    -->
+    <style name="ThemeOverlay.Gh4a.MaterialYou.Base"
+        parent="ThemeOverlay.Material3.DynamicColors.DayNight">
+        <item name="colorPrimary">@color/m3_ref_palette_dynamic_primary40</item>
+        <item name="colorPrimaryDark">@color/m3_ref_palette_dynamic_primary30</item>
+        <item name="colorOnPrimary">@color/m3_ref_palette_dynamic_primary100</item>
+        <item name="colorAccent">?attr/colorSecondary</item>
+        <item name="android:textColorLink">?attr/colorSecondary</item>
+        <item name="colorFab">?attr/colorPrimaryContainer</item>
+        <item name="colorOnFab">?attr/colorOnPrimaryContainer</item>
+        <item name="colorBreadcrumbBackground">?attr/colorPrimary</item>
+        <item name="colorIconForeground">?attr/colorOnSurfaceVariant</item>
+        <item name="drawerBackground">?attr/colorSurface</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="ThemeOverlay.Gh4a.MaterialYou"
+        parent="ThemeOverlay.Gh4a.MaterialYou.Base" />
+</resources>
