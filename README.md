@@ -1,5 +1,7 @@
 <img alt="Octodroid" align="right" src="https://raw.githubusercontent.com/slapperwan/gh4a/master/app/src/main/res/drawable-xxhdpi/octodroid.png">
 
+! Created using AI !
+
 OctoDroid
 =========
 This application provides access to [GitHub](https://github.com/) and lets you stay connected with your network
